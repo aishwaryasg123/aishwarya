@@ -26,7 +26,7 @@ struct Node * new_node()
 	printf("enter element\n");
 	scanf("%d",&elem);
   //strcpy(p->data,elem);
-    p->data=elem;
+        p->data=elem;
 	p->next=NULL;
 	p->prev=NULL;
 	p->up=NULL;
@@ -276,7 +276,7 @@ struct Node * findnode()
 	 struct Node *temp=first;
 	 printf("enter path \n");
 	 scanf("%s",path);
-	  p = strtok (path,",");
+	 p = strtok (path,",");
      while (p!= NULL)
     {
        printf ("%s\n",p);
@@ -321,11 +321,11 @@ void remove_node()
 	struct Node* temp=NULL;
 	temp=findnode();
 	
-	if(temp->next)
+    if(temp->next)
 	{
 	  temp->next->prev=NULL;
 	  temp->next=NULL;
-    }
+     }
     if(temp->prev)
 	{
 	  temp->prev->next=NULL;
@@ -415,7 +415,7 @@ int main()
 			case 4:insert_below();
 			       break;
 			       
-		    case 5:move_front();
+		        case 5:move_front();
 			       break;
 			       
 			case 6:move_back();
@@ -430,7 +430,7 @@ int main()
 			case 9:set_value();
 			        break;  
 			        
-		    case 10:get_value();
+		        case 10:get_value();
 			        break;  
 			        
 			case 11:flattenList(); 
@@ -441,12 +441,12 @@ int main()
 			         break;
 			//case 13: display();
 		          	//break;
-		    case 13:remove_node();
-		            break;
-		    case 14:link();
-		            break;
-		    case 15:findnode();
-		            break;
+		        case 13:remove_node();
+		                 break;
+		        case 14:link();
+		                break;
+		        case 15:findnode();
+		                break;
 			default:exit(0);
 			         break;
 		}
