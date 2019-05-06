@@ -27,7 +27,7 @@ struct Node * new_node()
 	p=malloc(sizeof(struct Node));
 	printf("enter element\n");
 	scanf("%d",&elem);
-    p->data=elem;
+        p->data=elem;
 	p->next=NULL;
 	p->prev=NULL;
 	p->up=NULL;
@@ -49,7 +49,7 @@ void insert_front()
 		cur=p;
 	}
 	else if(first->next==NULL)
-    {
+       {
 		p->next=first;
 		first->prev=p;
 		last=p->next;
@@ -240,7 +240,8 @@ void flattenList()
 void display()
 { 
 	struct Node *temp=first;
-	while (temp != NULL) { 
+	while (temp != NULL) 
+	{ 
 		
 		printf("%d\t", temp->data); 
 		temp= temp->next; 
@@ -322,22 +323,22 @@ void remove_node()
 	{
 	  temp->next->prev=NULL;
 	  temp->next=NULL;
-    }
-    if(temp->prev)
+        }
+       if(temp->prev)
 	{
 	  temp->prev->next=NULL;
 	  temp->prev=NULL;
-    }
-    if(temp->up)
+        }
+       if(temp->up)
 	{
 	  temp->up->down=NULL;
 	  temp->up=NULL;
-    }
-    if(temp->down)
+        }
+       if(temp->down)
 	{
 	  temp->down->up=NULL;
 	  temp->down=NULL;
-    }
+        }
     free(temp);
     printf("%d element is removed from the list\n",temp->data);
 }
@@ -416,7 +417,7 @@ int main()
 			case 4:insert_below();
 			       break;
 			       
-		    case 5:move_front();
+		        case 5:move_front();
 			       break;
 			       
 			case 6:move_back();
@@ -431,7 +432,7 @@ int main()
 			case 9:set_value();
 			        break;  
 			        
-		    case 10:get_value();
+		        case 10:get_value();
 			        break;  
 			        
 			case 11:flattenList(); 
@@ -441,16 +442,16 @@ int main()
 			        inorder(temp);
 			         break;
 			
-		    case 13:remove_node();
+		        case 13:remove_node();
 		            break;
 		            
-		    case 14:link();
+		        case 14:link();
 		            break;
 		            
-		    case 15:findnode();
+		        case 15:findnode();
 		            break;
 		            
-		  //  case 16: display();
+		     //  case 16: display();
 		      //    	break;
 		            
 			default:exit(0);
